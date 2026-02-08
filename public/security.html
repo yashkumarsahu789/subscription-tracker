@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Data Protection - Subscription Tracker</title>
+    <meta name="description" content="Learn how Subscription Tracker protects your data with Firebase security, encryption, and privacy-first practices.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://your-domain.com/security.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #667eea;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        .security-feature {
+            background: #f7f9fc;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        .security-feature h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.3rem;
+        }
+        .cta {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            background: #5568d3;
+        }
+        .back-link {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .important {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to App</a>
+        <div class="card">
+            <h1>Security & Data Protection</h1>
+            <p>At <strong>Subscription Tracker</strong>, your privacy and data security are our top priorities. We've implemented industry-standard security measures to protect your information.</p>
+            
+            <div class="security-feature">
+                <h3>🔒 Firebase Authentication</h3>
+                <p>We use Google Firebase Authentication, trusted by millions of apps worldwide. Your login credentials are never stored on our servers.</p>
+                <span class="badge">OAuth 2.0</span>
+                <span class="badge">SSL/TLS Encryption</span>
+            </div>
+            
+            <div class="security-feature">
+                <h3>☁️ Secure Cloud Storage</h3>
+                <p>All your subscription data is stored in Google Cloud Firestore with enterprise-grade security and automatic backups.</p>
+                <span class="badge">Encrypted at Rest</span>
+                <span class="badge">Auto-Backup</span>
+                <span class="badge">GDPR Compliant</span>
+            </div>
+            
+            <div class="security-feature">
+                <h3>🔐 Data Access Control</h3>
+                <p>Only you can access your subscription data. We enforce strict security rules that prevent unauthorized access.</p>
+                <span class="badge">User-Level Isolation</span>
+                <span class="badge">Firebase Security Rules</span>
+            </div>
+            
+            <div class="security-feature">
+                <h3>🛡️ No Third-Party Tracking</h3>
+                <p>We don't sell your data or share it with third parties. No ads, no tracking pixels, no analytics beyond basic Firebase usage stats.</p>
+                <span class="badge">Privacy-First</span>
+                <span class="badge">No Ads</span>
+            </div>
+            
+            <div class="security-feature">
+                <h3>💾 Offline Support</h3>
+                <p>Your data is cached locally for offline access using browser IndexedDB with built-in encryption.</p>
+                <span class="badge">Offline Mode</span>
+                <span class="badge">Local Encryption</span>
+            </div>
+            
+            <h2>What Data We Collect</h2>
+            <p>We only collect the minimum data necessary to provide the service:</p>
+            <ul style="margin-left: 2rem; color: #555;">
+                <li>Your email address (for authentication)</li>
+                <li>Subscription details (name, cost, billing cycle, etc.)</li>
+                <li>Notification preferences</li>
+            </ul>
+            
+            <h2>What We DON'T Collect</h2>
+            <ul style="margin-left: 2rem; color: #555;">
+                <li>Payment card numbers (we don't process payments)</li>
+                <li>Bank account details</li>
+                <li>Passwords (handled by Firebase)</li>
+                <li>Browsing history or tracking cookies</li>
+            </ul>
+            
+            <div class="important">
+                <strong>⚠️ Important:</strong> We never store your actual payment card numbers. The "last 4 digits" feature is optional and for your reference only – it's stored encrypted in your account.
+            </div>
+            
+            <h2>Data Deletion</h2>
+            <p>You are in complete control of your data. You can:</p>
+            <ul style="margin-left: 2rem; color: #555;">
+                <li>Delete individual subscriptions anytime</li>
+                <li>Export all your data as CSV</li>
+                <li>Request complete account deletion (contact us)</li>
+            </ul>
+            
+            <h2>Compliance</h2>
+            <p>Subscription Tracker follows best practices and complies with:</p>
+            <span class="badge">GDPR</span>
+            <span class="badge">CCPA</span>
+            <span class="badge">Firebase Security Guidelines</span>
+            <span class="badge">Google OAuth Standards</span>
+            
+            <h2>Questions?</h2>
+            <p>If you have any security concerns or questions about data protection, please review our <a href="/privacy-policy.html" style="color: #667eea;">Privacy Policy</a> or contact us.</p>
+            
+            <a href="/" class="cta">Start Using Subscription Tracker Securely →</a>
+        </div>
+    </div>
+</body>
+</html>
