@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subscription Tracker</title>
+    <script>
+      // Redirect to index.html with the requested path
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      
+      // Check if we're in the /subscription-tracker/ subdirectory
+      if (pathSegments[0] === 'subscription-tracker') {
+        // Remove the repo name from the path
+        pathSegments.shift();
+      }
+      
+      // Redirect to index.html with the path as query parameter
+      var redirectPath = '/subscription-tracker/?redirectTo=' + encodeURIComponent('/' + pathSegments.join('/'));
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
