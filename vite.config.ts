@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: process.env.GITHUB_PAGES ? '/subscription-tracker/' : '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
