@@ -1,0 +1,16 @@
+theme: jekyll-theme-mininmal
+plugins:
+  - jekyll-redirect-from
+
+# GitHub Pages settings for SPA
+markdown: kramdown
+exclude:
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Gemfile
+  - Gemfile.lock
+  - .github
+  - src
+  - public
+  - .env
