@@ -244,7 +244,7 @@ export function SubscriptionForm({ onSubmit, user }: SubscriptionFormProps) {
             isSubmitting
               ? 'bg-indigo-300 cursor-not-allowed'
               : !user
-              ? 'bg-linear-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg hover:shadow-xl transform hover:scale-105'
+              ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-600 hover:to-orange-600 shadow-lg hover:shadow-xl transform hover:scale-105'
               : 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
           )}
         >
