@@ -100,6 +100,7 @@ import { parseISO, differenceInDays } from 'date-fns';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { NotificationPrompt } from './components/NotificationPrompt';
+import { HomePage } from './components/HomePage';
 
 export function App() {
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
@@ -550,78 +551,79 @@ export function App() {
           isOnline={isOnline}
           pendingSync={pendingSync}
         />
-        <main className="flex-1">\n          {loading ? (
+        <main className="flex-1">
+          {loading ? (
             <div className="text-center py-12 text-slate-500">Loading...</div>
-          ) : (
+          ) : user ? (
             <>
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                {user && (
-                  <div className="lg:col-span-2 space-y-6">
-                    <DashboardStats subscriptions={subscriptions} />
-                    <FilterBar 
-                      onFilterChange={setSearchFilters}
-                    />
-                    <div className="flex justify-end mb-4">
-                      <ExportData subscriptions={subscriptions} />
-                    </div>
-                    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4">
-                      <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-xl font-semibold text-slate-900">My Subscriptions</h2>
-                        <div className="flex gap-2">
-                          <button
-                            onClick={() => setFilter('all')}
-                            className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                              filter === 'all' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                            }`}
-                          >
-                            All
-                          </button>
-                          <button
-                            onClick={() => setFilter('upcoming')}
-                            className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                              filter === 'upcoming' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                            }`}
-                          >
-                            Upcoming
-                          </button>
-                          <button
-                            onClick={() => setFilter('overdue')}
-                            className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                              filter === 'overdue' ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                            }`}
-                          >
-                            Overdue
-                          </button>
-                        </div>
-                      </div>
-                      {filteredSubscriptions.length === 0 ? (
-                        <div className="text-center py-12 text-slate-500">
-                          <p className="text-lg">No subscriptions found</p>
-                          <p className="text-sm mt-2">Add your first subscription to get started</p>
-                        </div>
-                      ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          {filteredSubscriptions.map((sub) => (
-                            <SubscriptionCard
-                              key={sub.id}
-                              subscription={sub}
-                              onDelete={handleDeleteSubscription}
-                              onPause={handlePauseSubscription}
-                              onResume={handleResumeSubscription}
-                              onMarkAsPaid={handleMarkAsPaid}
-                            />
-                          ))}
-                        </div>
-                      )}
-                    </div>
+                <div className="lg:col-span-2 space-y-6">
+                  <DashboardStats subscriptions={subscriptions} />
+                  <FilterBar 
+                    onFilterChange={setSearchFilters}
+                  />
+                  <div className="flex justify-end mb-4">
+                    <ExportData subscriptions={subscriptions} />
                   </div>
-                )}
-                <div className={user ? "space-y-6" : "lg:col-span-3 max-w-2xl mx-auto w-full space-y-6"}>
+                  <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <h2 className="text-xl font-semibold text-slate-900">My Subscriptions</h2>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => setFilter('all')}
+                          className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                            filter === 'all' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          }`}
+                        >
+                          All
+                        </button>
+                        <button
+                          onClick={() => setFilter('upcoming')}
+                          className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                            filter === 'upcoming' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          }`}
+                        >
+                          Upcoming
+                        </button>
+                        <button
+                          onClick={() => setFilter('overdue')}
+                          className={`cursor-pointer px-3 py-1 rounded-full text-sm font-medium transition-colors ${
+                            filter === 'overdue' ? 'bg-red-600 text-white' : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                          }`}
+                        >
+                          Overdue
+                        </button>
+                      </div>
+                    </div>
+                    {filteredSubscriptions.length === 0 ? (
+                      <div className="text-center py-12 text-slate-500">
+                        <p className="text-lg">No subscriptions found</p>
+                        <p className="text-sm mt-2">Add your first subscription to get started</p>
+                      </div>
+                    ) : (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {filteredSubscriptions.map((sub) => (
+                          <SubscriptionCard
+                            key={sub.id}
+                            subscription={sub}
+                            onDelete={handleDeleteSubscription}
+                            onPause={handlePauseSubscription}
+                            onResume={handleResumeSubscription}
+                            onMarkAsPaid={handleMarkAsPaid}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="space-y-6">
                   <SubscriptionForm onSubmit={handleAddSubscription} user={user} />
                 </div>
               </div>
-              {user && <QuickAddWidget onQuickAdd={handleQuickAdd} />}
+              <QuickAddWidget onQuickAdd={handleQuickAdd} />
             </>
+          ) : (
+            <HomePage onSignupClick={() => setShowSignup(true)} />
           )}
         </main>
         <Footer />
