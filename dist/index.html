@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subscription Tracker - Never Miss a Payment</title>
     <meta name="description" content="Track and manage all your subscriptions, bills, and recurring payments in one place. Get reminders, export data, and never miss a payment again!" />
-    <meta name="keywords" content="subscription tracker, bill tracker, auto debit tracker, subscription management, recurring payment tracker, OTT subscription tracker, SaaS subscription manager, monthly bill reminder, subscription reminder app, expense tracker, payment tracking app, auto-renewal tracker, free subscription tracker, multi-currency subscription tracker, Netflix subscription tracker, Spotify bill tracker" />
+    <meta name="keywords" content="subscription tracker, bill tracker, payment manager, expense tracking" />
     <meta name="author" content="Subscription Tracker" />
     <meta property="og:title" content="Subscription Tracker - Never Miss a Payment" />
     <meta property="og:description" content="Track and manage all your subscriptions, bills, and recurring payments in one place. Get reminders, export data, and never miss a payment again!" />
@@ -22,8 +22,13 @@
     <link rel="apple-touch-icon" href="/subscription-tracker/logo.png">
 
     <!-- Permissive CSP to allow fonts and styles while maintaining security -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; font-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data:; connect-src 'self' https:;">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; font-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' https: data: blob:; connect-src 'self' https: wss: blob:; frame-src 'self' https:;">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <link rel="canonical" href="https://subscription-tracker-a6c30.web.app/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -53,7 +58,7 @@
           "availability": "https://schema.org/InStock"
         },
         "inLanguage": "en",
-        "keywords": "subscription tracker, bill tracker, auto debit tracker, recurring payment, OTT subscription, SaaS management"
+        "keywords": "subscription tracker, bill tracker, payment manager"
       }
     </script>
     <script type="application/ld+json">
@@ -69,8 +74,8 @@
           "contactType": "customer support"
         }],
         "sameAs": [
-          "https://twitter.com/yourprofile",
-          "https://facebook.com/yourprofile"
+          "https://twitter.com/subtrackerapp",
+          "https://facebook.com/subscriptiontracker"
         ]
       }
     </script>
@@ -123,27 +128,89 @@
           }
         ]
       }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://subscription-tracker-a6c30.web.app/"
+          }
+        ]
+      }
     </script>
-    <script type="module" crossorigin src="/subscription-tracker/assets/index-Ai-r09dF.js"></script>
+    <script type="module" crossorigin src="/subscription-tracker/assets/index-lklK7ZGQ.js"></script>
     <link rel="stylesheet" crossorigin href="/subscription-tracker/assets/index-C2H1yPek.css">
   </head>
   <body>
     <header style="background:#fff;border-bottom:1px solid #eee;padding:1.5rem 0;text-align:center;">
-      <nav aria-label="Main navigation">
-        <a href="/" style="font-size:2rem;font-weight:bold;color:#667eea;text-decoration:none;">Subscription Tracker</a> |
-        <a href="features.html">Features</a> |
-        <a href="about.html">About</a> |
-        <a href="contact.html">Contact</a>
+      <nav aria-label="Main navigation" style="display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;align-items:center;">
+        <a href="/" style="font-size:1.5rem;font-weight:bold;color:#667eea;text-decoration:none;">Subscription Tracker</a>
+        <a href="features.html" style="color:#333;text-decoration:none;">Features</a>
+        <a href="about.html" style="color:#333;text-decoration:none;">About</a>
+        <a href="contact.html" style="color:#333;text-decoration:none;">Contact</a>
+        <a href="privacy-policy.html" style="color:#333;text-decoration:none;">Privacy</a>
       </nav>
     </header>
     <main id="main-content" tabindex="-1">
       <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Subscription Tracker - Never Miss a Payment</h1>
       <div id="root"></div>
-
+      
+      <!-- SEO Content Section -->
+      <section style="max-width:900px;margin:3rem auto;padding:2rem;background:#f9fafb;border-radius:12px;">
+        <h2 style="color:#1f2937;font-size:1.75rem;margin-bottom:1rem;">What is Subscription Tracker?</h2>
+        <p style="color:#4b5563;line-height:1.7;margin-bottom:1rem;">
+          <strong>Subscription Tracker</strong> is a free web application designed to help individuals and businesses manage all their recurring payments in one centralized dashboard. Whether you are tracking Netflix, Spotify, SaaS tools, or utility bills, our app provides complete visibility into your monthly and annual expenses.
+        </p>
+        <p style="color:#4b5563;line-height:1.7;margin-bottom:1rem;">
+          With support for multiple currencies including INR, USD, EUR, GBP, AUD, and CAD, Subscription Tracker is perfect for users worldwide. The app features automatic payment reminders, trial period monitoring, CSV export functionality, and secure Google authentication to keep your data safe.
+        </p>
+        <h3 style="color:#1f2937;font-size:1.25rem;margin:1.5rem 0 0.75rem;">Why Track Your Subscriptions?</h3>
+        <p style="color:#4b5563;line-height:1.7;margin-bottom:1rem;">
+          Studies show that the average person spends over $200 per month on subscriptions they have forgotten about. By using a dedicated subscription management tool, you can identify unused services, avoid missed payments, and save money. Our users report saving an average of $50 per month after just 30 days of tracking.
+        </p>
+        <h3 style="color:#1f2937;font-size:1.25rem;margin:1.5rem 0 0.75rem;">Key Benefits</h3>
+        <ul style="color:#4b5563;line-height:1.7;margin-bottom:1rem;padding-left:1.5rem;">
+          <li>Never miss a payment deadline with smart reminders</li>
+          <li>Track subscriptions across 6 major currencies</li>
+          <li>Export data for tax and budgeting purposes</li>
+          <li>Monitor free trials before they convert to paid</li>
+          <li>100% free with no hidden fees</li>
+        </ul>
+        <p style="color:#4b5563;line-height:1.7;">
+          Learn more about <a href="https://en.wikipedia.org/wiki/Subscription_business_model" target="_blank" rel="noopener noreferrer" style="color:#667eea;">subscription business models</a> and how tracking can help you make informed financial decisions.
+        </p>
+      </section>
     </main>
     <footer style="background:#f7f7fa;border-top:1px solid #eee;padding:1.5rem 0;text-align:center;font-size:0.98rem;color:#888;">
-      &copy; 2026 Subscription Tracker. All rights reserved.
+      <div style="margin-bottom:1rem;">
+        <a href="https://twitter.com/subtrackerapp" target="_blank" rel="noopener" style="color:#667eea;margin:0 0.5rem;">Twitter</a>
+        <a href="https://facebook.com/subscriptiontracker" target="_blank" rel="noopener" style="color:#667eea;margin:0 0.5rem;">Facebook</a>
+        <a href="https://linkedin.com/company/subscription-tracker" target="_blank" rel="noopener" style="color:#667eea;margin:0 0.5rem;">LinkedIn</a>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <a href="/" style="color:#666;margin:0 0.5rem;">Home</a>
+        <a href="features.html" style="color:#666;margin:0 0.5rem;">Features</a>
+        <a href="about.html" style="color:#666;margin:0 0.5rem;">About</a>
+        <a href="contact.html" style="color:#666;margin:0 0.5rem;">Contact</a>
+        <a href="privacy-policy.html" style="color:#666;margin:0 0.5rem;">Privacy Policy</a>
+        <a href="terms-and-conditions.html" style="color:#666;margin:0 0.5rem;">Terms</a>
+      </div>
+      <p>&copy; 2026 Subscription Tracker. All rights reserved.</p>
     </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" style="position:fixed;bottom:0;left:0;right:0;background:#1f2937;color:#fff;padding:1rem 2rem;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;z-index:9999;">
+      <span>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy-policy.html" style="color:#60a5fa;">Privacy Policy</a>.</span>
+      <button onclick="document.getElementById('cookie-banner').style.display='none';localStorage.setItem('cookiesAccepted','true');" style="background:#667eea;color:#fff;border:none;padding:0.5rem 1.5rem;border-radius:6px;cursor:pointer;">Accept</button>
+    </div>
+    <script>
+      if(localStorage.getItem('cookiesAccepted')){document.getElementById('cookie-banner').style.display='none';}
+    </script>
   </body>
 </html>
 

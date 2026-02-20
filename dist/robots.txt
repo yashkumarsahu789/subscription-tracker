@@ -1,17 +1,5 @@
 User-agent: *
+Disallow:
 Allow: /
-
-# Allow all major search engine bots
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
 Sitemap: https://subscription-tracker-a6c30.web.app/sitemap.xml
 
-# Crawl-delay for politeness
-Crawl-delay: 1
